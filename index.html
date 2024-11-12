@@ -1,0 +1,33 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulador de AFND</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Simulador de AFND</h1>
+  <p>Instrucciones:</p>
+  <ul>
+    <li>Haz clic en el área del grafo para agregar un nuevo estado.</li>
+    <li>Haz clic en un estado y luego en otro para crear una transición.</li>
+    <li>Haz clic derecho en un estado para establecerlo como inicial o de aceptación.</li>
+    <li>Arrastra las acciones disponibles a la cola de acciones y presiona "Simular AFND".</li>
+  </ul>
+  <div id="afnd-container">
+    <svg id="afnd-svg" width="800" height="600"></svg>
+  </div>
+
+  <div id="acciones-disponibles">
+    <h2>Acciones Disponibles</h2>
+  </div>
+
+  <div id="cola-acciones">
+    <h2>Secuencia de Acciones</h2>
+  </div>
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

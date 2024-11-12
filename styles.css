@@ -1,0 +1,27 @@
+#afnd-container {
+    border: 1px solid #ccc;
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    position: relative;
+  }
+  
+  #afnd-svg {
+    background-color: #f9f9f9;
+  }
+
+#acciones-disponibles, #cola-acciones {
+    width: 300px;
+    min-height: 200px;
+    border: 1px solid #ccc;
+    margin: 20px;
+    float: left;
+  }
+  
+  .accion {
+    padding: 10px;
+    margin: 5px;
+    background-color: #e0e0e0;
+    cursor: grab;
+  }
+  
