@@ -1,3 +1,5 @@
+// script.js
+
 const svg = d3.select("#afnd-svg");
 
 let estados = [];
@@ -133,7 +135,8 @@ function agregarTransicion(estadoOrigen, estadoDestino, accion) {
     .attr("y1", estadoOrigen.y)
     .attr("x2", estadoDestino.x)
     .attr("y2", estadoDestino.y)
-    .attr("stroke", "black");
+    .attr("stroke", "black")
+    .attr("marker-end", "url(#arrow)"); // Agrega la punta de flecha
 
   svg.append("text")
     .attr("x", (estadoOrigen.x + estadoDestino.x) / 2)
@@ -156,6 +159,16 @@ function drop(e) {
   const nuevoElemento = document.createElement('div');
   nuevoElemento.classList.add('accion');
   nuevoElemento.innerText = accion;
+  nuevoElemento.setAttribute('draggable', 'true');
+  nuevoElemento.addEventListener('dragstart', dragStart);
+
+  nuevoElemento.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+    if (confirm("¿Eliminar esta acción de la secuencia?")) {
+      nuevoElemento.remove();
+    }
+  });
+
   colaAcciones.appendChild(nuevoElemento);
 }
 

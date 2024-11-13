@@ -16,7 +16,14 @@
     <li>Arrastra las acciones disponibles a la cola de acciones y presiona "Simular AFND".</li>
   </ul>
   <div id="afnd-container">
-    <svg id="afnd-svg" width="800" height="600"></svg>
+    <svg id="afnd-svg" width="800" height="600">
+      <!-- Definición de la flecha para las transiciones -->
+      <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="3" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L0,6 L9,3 z" fill="black" />
+        </marker>
+      </defs>
+    </svg>
   </div>
 
   <div id="acciones-disponibles">
