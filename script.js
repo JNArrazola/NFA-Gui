@@ -207,6 +207,16 @@ function simularAFND() {
 }
 
 const botonSimular = document.createElement('button');
+
+// <button class="button-89" role="button">Button 89</button>
+
+botonSimular.classList.add('button-89');
+botonSimular.setAttribute('role', 'button');
 botonSimular.innerText = 'Simular AFND';
 botonSimular.addEventListener('click', simularAFND);
 document.body.appendChild(botonSimular);
+
+// botonSimular.classList.add('button');
+// botonSimular.innerText = 'Simular AFND';
+// botonSimular.addEventListener('click', simularAFND);
+// document.body.appendChild(botonSimular);
